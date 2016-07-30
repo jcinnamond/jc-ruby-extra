@@ -1,4 +1,4 @@
-;;; jc-ruby-extra --- helper functions for ruby
+;;; jc-ruby-extra.el --- helper functions for ruby
 
 ;; Copyright 2016 John Cinnamond
 
@@ -9,8 +9,8 @@
 ;;
 ;; This mode adds two functions:
 ;;
-;; * jc-align-hash --- aligns elements in a ruby hash (using both => and : styles)
-;; * jc-ruby-instance-variables --- adds instance variables and attribute readers from a param list
+;; jc-align-hash - aligns elements in a ruby hash (using both => and : styles)
+;; jc-ruby-instance-variables - adds instance variables and attribute readers from a param list
 
 ;;; License:
 
@@ -33,7 +33,6 @@
 ;; Boston, MA 02110-1301, USA.
 
 ;;; Code:
-
 ;; Alignment for hashes
 (defun jc-align-hash-old-style-p (string)
   (if (string-match "=>" string)
