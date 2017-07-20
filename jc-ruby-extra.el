@@ -57,6 +57,14 @@
 	  (jc-align-hash-new-style)))
     (message "jc-align-hash requires an active mark")))
 
+(defun jc-align-requests ()
+  (interactive)
+  (save-excursion
+    (ruby-beginning-of-block)
+    (let ((beg (point)))
+      (ruby-forward-sexp)
+      (align-regexp beg (point) "\\(\\s-*\\)>>"))))
+
 ;; Create instance variables from method params
 (defun jc-ruby-instance-variables ()
   "Creates an assignment to an instance variables for each method param"
